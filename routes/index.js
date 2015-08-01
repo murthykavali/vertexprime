@@ -56,13 +56,16 @@ router.get('/registrations', function (req, res, next) {
 
 /*Get Registrations per sport*/
 router.get('/sport/:sport_id', function (req, res, next) {
+   
   var self= res;
     var sport_id= req.params.sport_id;
     connection.query('select person_id, first_name, last_name from persons where persons.person_id in (select person_id from  registrations r where r.sport_id='+sport_id+');', function(err, rows, fields) {
     if (!err){
+      var sports = [ "","Badminton","Table Tennis","Carroms","Chess","Snooker", "Cycling", "Tennikoit", "Swimming", "Skating", "Running", "Lemon & Spoon Race","Sack Race"];
+      var title = sports[sport_id];
       // rows = JSON.stringify(rows);
       console.log('The solution is: ', rows);
-      self.render('reg-per-sport', {title: 'Registration Per Sport', regData: rows});
+      self.render('reg-per-sport', {title: sports[sport_id], regData: rows});
     }else{
       console.log('Error while performing Query.');
     }
@@ -70,6 +73,8 @@ router.get('/sport/:sport_id', function (req, res, next) {
 });
 
 });
+
+
 
 /*Get Details per Person*/
 router.get('/person/:person_id', function (req, res, next) {
