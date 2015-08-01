@@ -13,21 +13,6 @@ connection.connect();
 
 
 
-
-require('plotly')('MurthyKavali', '87s9adlcbj');
-
-var data = [
-  {
-    x: ["giraffes", "orangutans", "monkeys"],
-    y: [20, 14, 23],
-    type: "bar"
-  }
-];
-var graphOptions = {filename: "basic-bar", fileopt: "overwrite"};
-plotly.plot(data, graphOptions, function (err, msg) {
-    console.log(msg);
-});
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
 	
