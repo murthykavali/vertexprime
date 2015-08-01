@@ -55,10 +55,10 @@ router.get('/registrations', function (req, res, next) {
 });
 
 /*Get Registrations per sport*/
-router.get('/sport_id/:sport_id', function (req, res, next) {
+router.get('/sport/:sport_id', function (req, res, next) {
   var self= res;
     var sport_id= req.params.sport_id;
-    connection.query('select first_name, last_name from persons where persons.person_id in (select person_id from  registrations r where r.sport_id='+sport_id+');', function(err, rows, fields) {
+    connection.query('select person_id, first_name, last_name from persons where persons.person_id in (select person_id from  registrations r where r.sport_id='+sport_id+');', function(err, rows, fields) {
     if (!err){
       // rows = JSON.stringify(rows);
       console.log('The solution is: ', rows);

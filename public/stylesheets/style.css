@@ -10,7 +10,7 @@ div#common-header {
     left: 0;
     background: #eee;
     width: 100%;
-    height: 90px;
+    height: 78px;
     z-index: 100;
     border-bottom: 1px solid #ddd;
     font: 400 14px/1.6 "Open Sans", sans-serif;
@@ -84,10 +84,10 @@ div#person-details {
 /* dropdown menu */
 
 #navmenu {
-    padding-top: 45px;
+    /*padding-top: 45px;*/
     margin: 0;
     position: absolute;
-    right: 260px;
+    /*right: 260px;*/
     top: 15px;
     z-index: 1000;
 }

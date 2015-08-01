@@ -1,7 +1,10 @@
 extends layout
 
 block content
-    h1= title
+    h1
+     |Details of 
+     = regData[0].first_name +' '
+     |are:
 
     - each event in regData
       span#person-details.person-details

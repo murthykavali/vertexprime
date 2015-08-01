@@ -1,7 +1,8 @@
 extends layout
 
 block content
-    h1= title
-    h2= regData.length
+    h2
+     |Total number of registrations for this game are: 	
+     = regData.length
     - each event in regData
-        p= event.first_name + " " + event.last_name
+        a(href= '/person/'+event.person_id)= event.first_name +' | '
