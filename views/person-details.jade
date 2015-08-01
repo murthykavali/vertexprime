@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1= title
+    h2= regData.length
+    - each event in regData
+        = event.first_name +'  '
+        = event.age +'  '
+        = event.block +'  '
+        = event.flat +' '
+        = event.gender
+        br
