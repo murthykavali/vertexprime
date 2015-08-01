@@ -2,11 +2,19 @@ extends layout
 
 block content
     h1= title
-    h2= regData.length
+
     - each event in regData
-        = event.first_name +'  '
-        = event.age +'  '
+      span#person-details.person-details
+        |Name:  
+        = event.first_name
+        br
+        |Group: 
+        = event.age
+        br
+        |Flat:
         = event.block +'  '
-        = event.flat +' '
+        = event.flat
+        br
+        |Gender: 
         = event.gender
         br
