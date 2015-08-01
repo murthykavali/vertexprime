@@ -1,0 +1,55 @@
+.mask {
+    float: unset;
+    margin-left: 40px;
+    margin-top:-10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul.images {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    list-style-type: none;
+}
+
+ul.images li {
+    float: left;
+    width: 977px;
+}
+
+ul.images > li > img{
+    width: 935px;
+}
+
+
+ul.triggers {
+    position: static;
+    top: 310px;
+    left: 80px;
+    margin-top: 225px;
+    margin-left: 326px;
+    list-style-type: none;
+}
+
+ul.triggers li {
+    float: left;
+    margin: 0 5px;
+    font: bold 16px arial;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+    padding: 10px;
+}
+
+ul.triggers li.selected {
+    background-color: red;
+    color: #000;
+}
+
+.control {
+    position: absolute;
+    top: 380px;
+    color: #fff;
+    cursor: pointer;
+}

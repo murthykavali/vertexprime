@@ -1,0 +1,30 @@
+create database prime
+
+create table sports(sport_id INT(2) UNSIGNED AUTO_INCREMENT PRIMARY KEY, sport_name varchar(20) not null);
+
+
+insert into sports(sport_name) values('Badminton');
+insert into sports(sport_name) values('Table Tennis');
+insert into sports(sport_name) values('Carroms');
+insert into sports(sport_name) values('Chess');
+insert into sports(sport_name) values('Snooker');
+insert into sports(sport_name) values('Cycling');
+insert into sports(sport_name) values('Tennikoit');
+insert into sports(sport_name) values('Swimming');
+insert into sports(sport_name) values('Skating');
+insert into sports(sport_name) values('Running');
+insert into sports(sport_name) values('Lemon & Spoon Race');
+insert into sports(sport_name) values('Sack Race');
+
+create table persons(person_id INT(4) UNSIGNED AUTO_INCREMENT PRIMARY 
+KEY, first_name varchar(20) not null, last_name varchar(20));
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'welcome',
+  database : 'prime'
+});
+
+connection.connect();
