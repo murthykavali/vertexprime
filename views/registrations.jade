@@ -4,4 +4,6 @@ block content
     h1= title
     h2= regData.length
     - each event in regData
-        p= event.first_name + ":" + event.sports
+        a(href= '/person/'+event.person_id)= event.first_name +' '
+        = event.sports
+        br
